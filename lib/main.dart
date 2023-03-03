@@ -1,4 +1,4 @@
-import 'package:collage_recommandation/screens/Auth_Screen/log_in/Login.dart';
+import 'package:collage_recommandation/screens/Auth_Screen/log_in/log_in.dart';
 import 'package:flutter/material.dart';
 
 void main() {
