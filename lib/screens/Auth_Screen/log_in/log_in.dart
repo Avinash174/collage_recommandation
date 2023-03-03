@@ -1,6 +1,8 @@
 import 'package:collage_recommandation/screens/Auth_Screen/sign_up/sign_up.dart';
 import 'package:collage_recommandation/screens/homepage/home.dart';
 import 'package:flutter/material.dart';
+import 'package:remixicon/remixicon.dart';
+
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -21,7 +23,7 @@ class _LogInScreenState extends State<LogInScreen> {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Icon(Icons.arrow_back_ios_new),
+          icon: Icon(Icons.arrow_back),
         ),
       ),
       body: SingleChildScrollView(
@@ -31,7 +33,7 @@ class _LogInScreenState extends State<LogInScreen> {
             Container(
               height: 200,
               width: 250,
-              child: Icon(Icons.person),
+              
             ),
             const Padding(
               padding: EdgeInsets.all(10),
@@ -56,7 +58,7 @@ class _LogInScreenState extends State<LogInScreen> {
               onPressed: () {
                 //TODO FORGOT PASSWORD SCREEN GOES HERE
               },
-              child: Text(
+              child: const Text(
                 'Forgot Password',
                 style: TextStyle(color: Colors.blue, fontSize: 15),
               ),

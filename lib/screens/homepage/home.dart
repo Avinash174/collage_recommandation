@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:remixicon/remixicon.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,11 +14,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Page'),
+        leading: IconButton(
+          onPressed: () {Navigator.pop(context);},
+          icon: Icon(Remix.arrow_go_back_fill),
+        ),
       ),
       body: Column(
-        children: [
-
-        ],
+        children: [],
       ),
     );
   }
