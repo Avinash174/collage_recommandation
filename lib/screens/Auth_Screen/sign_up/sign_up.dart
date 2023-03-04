@@ -1,6 +1,7 @@
 import 'package:collage_recommandation/screens/Auth_Screen/log_in/log_in.dart';
 import 'package:collage_recommandation/screens/homepage/home.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:remixicon/remixicon.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -28,7 +29,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Container(
               height: 200,
               width: 250,
-
+              child: Lottie.network('https://assets6.lottiefiles.com/packages/lf20_cz6ukw4q.json'),
             ),
             const Padding(
               padding: EdgeInsets.all(10),
@@ -37,6 +38,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     border: OutlineInputBorder(),
                     labelText: 'User Name',
                     hintText: 'Enter valid mail id as abc@gmail.com'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Mobile Number',
+                    hintText: 'Enter Mobile Number'),
               ),
             ),
             const Padding(
@@ -49,14 +60,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     hintText: 'Enter your secure password'),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                //TODO FORGOT PASSWORD SCREEN GOES HERE
-              },
-              child: const Text(
-                'Forgot Password',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Confirm Password',
+                    hintText: 'Enter your secure password'),
               ),
+            ),
+            SizedBox(
+              height: 30,
             ),
             Container(
               height: 50,
@@ -69,13 +84,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       context, MaterialPageRoute(builder: (_) => HomePage()));
                 },
                 child: const Text(
-                  'Login',
+                  'Create Account',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
             ),
             const SizedBox(
-              height: 130,
+              height: 50,
             ),
             TextButton(
               onPressed: () {

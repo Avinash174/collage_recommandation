@@ -1,4 +1,5 @@
 import 'package:collage_recommandation/screens/Auth_Screen/log_in/log_in.dart';
+import 'package:collage_recommandation/screens/intro_screen/onbording_screen/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LogInScreen(),
+      home: const OnbordingScreen(),
     );
   }
 }

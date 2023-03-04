@@ -1,6 +1,8 @@
+import 'package:collage_recommandation/screens/Auth_Screen/forget_pass.dart';
 import 'package:collage_recommandation/screens/Auth_Screen/sign_up/sign_up.dart';
 import 'package:collage_recommandation/screens/homepage/home.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:remixicon/remixicon.dart';
 
 
@@ -33,7 +35,7 @@ class _LogInScreenState extends State<LogInScreen> {
             Container(
               height: 200,
               width: 250,
-              
+              child: Lottie.network('https://assets6.lottiefiles.com/packages/lf20_cz6ukw4q.json'),
             ),
             const Padding(
               padding: EdgeInsets.all(10),
@@ -57,6 +59,7 @@ class _LogInScreenState extends State<LogInScreen> {
             TextButton(
               onPressed: () {
                 //TODO FORGOT PASSWORD SCREEN GOES HERE
+                Navigator.push(context, MaterialPageRoute(builder: (_)=>ForgetPassWord()));
               },
               child: const Text(
                 'Forgot Password',
@@ -80,7 +83,7 @@ class _LogInScreenState extends State<LogInScreen> {
               ),
             ),
             const SizedBox(
-              height: 130,
+              height: 50,
             ),
             TextButton(
               onPressed: () {
