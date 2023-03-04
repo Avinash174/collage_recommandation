@@ -16,6 +16,7 @@ class _ForgetPassWordState extends State<ForgetPassWord> {
         title: Text('forget Password'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children:  [
           Padding(
             padding: EdgeInsets.all(10),
@@ -39,7 +40,7 @@ class _ForgetPassWordState extends State<ForgetPassWord> {
           ElevatedButton(
               onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (_)=>LogInScreen()));
-          }, child: Text('Click Me'))
+          }, child: Text('Reset Password'))
         ],
       ),
     );

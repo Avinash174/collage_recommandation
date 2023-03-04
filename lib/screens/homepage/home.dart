@@ -1,3 +1,5 @@
+import 'package:collage_recommandation/screens/Auth_Screen/sign_up/sign_up.dart';
+import 'package:collage_recommandation/screens/Profile/student_profile/student_profile.dart';
 import 'package:collage_recommandation/screens/homepage/home/home1.dart';
 import 'package:flutter/material.dart';
 import 'package:remixicon/remixicon.dart';
@@ -95,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => HomePageOne()));
               },
-              icon: Icon(Remix.search_2_fill),
+              icon: Icon(Remix.home_2_fill),
             ),
             label: 'Home',
           ),
@@ -108,9 +110,14 @@ class _HomePageState extends State<HomePage> {
             label: 'Filter',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Remix.user_6_fill),
+            icon: IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SignUpScreen()));
+              }, icon: Icon(Remix.user_2_fill),
+    ),
             label: 'Profile',
-          ),
+            ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
