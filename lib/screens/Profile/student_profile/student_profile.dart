@@ -1,3 +1,4 @@
+import 'package:collage_recommandation/screens/constant/bottombar.dart';
 import 'package:flutter/material.dart';
 
 class StudentProfile extends StatefulWidget {
@@ -59,6 +60,7 @@ class _StudentProfileState extends State<StudentProfile> {
           ElevatedButton(onPressed: (){}, child: Text('Register'))
         ],
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

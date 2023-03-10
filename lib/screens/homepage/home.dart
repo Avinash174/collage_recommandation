@@ -83,8 +83,11 @@ class _HomePageState extends State<HomePage> {
             },
             icon: Icon(Icons.arrow_back_ios_new),
           )),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: Container(
+        child: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.grey[200],
