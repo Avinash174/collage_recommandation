@@ -77,12 +77,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
           title: Text('Home Page'),
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(Icons.arrow_back_ios_new),
-          )),
+          leading: Icon(Icons.menu),
+      ),
       body: Container(
         child: Center(
           child: _widgetOptions.elementAt(_selectedIndex),

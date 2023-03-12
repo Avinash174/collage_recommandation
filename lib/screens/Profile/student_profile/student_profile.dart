@@ -60,7 +60,7 @@ class _StudentProfileState extends State<StudentProfile> {
           ElevatedButton(onPressed: (){}, child: Text('Register'))
         ],
       ),
-      bottomNavigationBar: BottomBar(),
+      bottomNavigationBar:BottomBar(),
     );
   }
 }
