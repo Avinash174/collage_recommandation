@@ -14,6 +14,7 @@ class _HomePageOneState extends State<HomePageOne> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Page'),
+        leading: Icon(Icons.menu),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -8,6 +8,7 @@ class FilterScreen extends StatefulWidget {
 }
 
 class _FilterScreenState extends State<FilterScreen> {
+  bool value = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +16,9 @@ class _FilterScreenState extends State<FilterScreen> {
         title: Text('Filter'),
       ),
       body: Container(
-        height: 200,
+        height: 500,
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -29,7 +30,7 @@ class _FilterScreenState extends State<FilterScreen> {
                 height: 20,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
                 children: const <Widget>[
                   Expanded(
                     child: TextField(
@@ -58,7 +59,16 @@ class _FilterScreenState extends State<FilterScreen> {
                 'Cast:',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
               ),
-
+             Container(
+               child:  CheckboxListTile(
+                 value: value,
+                 onChanged: (value) => setState(
+                       () {
+                     this.value = value!;
+                   },
+                 ),
+               ),
+             )
             ],
           ),
         ),
